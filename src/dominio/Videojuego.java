@@ -49,7 +49,6 @@ public int getHorasJugadas() {
             this.horasJugadas = 0;
         }
     }
-    @Override
     public String toString() {
         return  titulo + " | Plataforma: " + plataforma + " | Puntuación: " + puntuacion + " | Horas: " + horasJugadas;
     }

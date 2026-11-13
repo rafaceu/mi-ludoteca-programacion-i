@@ -3,7 +3,7 @@ package dominio;
 import java.util.ArrayList;
 
 public class Ludoteca {
-    public ArrayList<Videojuego> videojuegos;
+    private ArrayList<Videojuego> videojuegos;
 
     public Ludoteca() {
         videojuegos = new ArrayList<>();
@@ -16,7 +16,7 @@ public class Ludoteca {
     public String toString() {
         String resultado = "";
         for (Videojuego j : videojuegos) {
-            resultado = resultado + j.toString();
+            resultado = resultado + j.toString() + "\n";
         }
         return resultado;
     }

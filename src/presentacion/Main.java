@@ -1,37 +1,27 @@
 package presentacion;
 
 import dominio.Ludoteca;
-import dominio.Videojuego;
+import dominio.VideojuegoRol;
+import dominio.VideojuegoDeportivo;
+import dominio.VideojuegoEstrategia;
+import dominio.VideojuegoOnline;
 
 public class Main {
     public static void main(String[] args) {
         Ludoteca miLudoteca = new Ludoteca();
 
-        Videojuego j1 = new Videojuego("Zelda", "Nintendo Switch", 95, 50);
-        Videojuego j2 = new Videojuego("Minecraft", "PC", 90, 120);
-        Videojuego j3 = new Videojuego("Hollow Knight", "PC", 92, 40);
+       
+        VideojuegoRol rol = new VideojuegoRol("Zelda", "Nintendo Switch", 95, 50, 120);
+        VideojuegoDeportivo deportivo = new VideojuegoDeportivo("FIFA", "PS5", 85, 90, "Fútbol");
+        VideojuegoEstrategia estrategia = new VideojuegoEstrategia("Civilization", "PC", 90, 200, 6);
+        VideojuegoOnline online = new VideojuegoOnline("Minecraft", "PC", 92, 150, 100);
 
-        miLudoteca.agregar(j1);
-        miLudoteca.agregar(j2);
-        miLudoteca.agregar(j3);
+        miLudoteca.agregar(rol);
+        miLudoteca.agregar(deportivo);
+        miLudoteca.agregar(estrategia);
+        miLudoteca.agregar(online);
 
-        System.out.println("--- LISTA DE JUEGOS ---");
+        System.out.println("===LISTA COMPLETA EN LA LUDOTECA===");
         System.out.println(miLudoteca);
-
-        System.out.println("--- BUSCANDO JUEGO EXISTENTE ---");
-        Videojuego encontrado = miLudoteca.buscarPorTitulo("Minecraft");
-        if (encontrado == null) {
-            System.out.println("No se ha encontrado.");
-        } else {
-            System.out.println("Encontrado: " + encontrado);
-        }
-
-        System.out.println("--- BUSCANDO JUEGO INEXISTENTE ---");
-        Videojuego noEncontrado = miLudoteca.buscarPorTitulo("Cyberpunk");
-        if (noEncontrado == null) {
-            System.out.println("El juego no está en la ludoteca.");
-        } else {
-            System.out.println("Encontrado: " + noEncontrado);
-        }
     }
 }
