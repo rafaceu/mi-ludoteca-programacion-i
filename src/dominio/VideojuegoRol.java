@@ -4,7 +4,11 @@ public class VideojuegoRol extends Videojuego {
     private int numeroMisiones;
 
     public VideojuegoRol(String titulo, String plataforma, int puntuacion, int horasJugadas, int numeroMisiones) {
-        super(titulo, plataforma, puntuacion, horasJugadas);
+        
+        setTitulo(titulo);
+        setPlataforma(plataforma);
+        setPuntuacion(puntuacion);
+        setHorasJugadas(horasJugadas);
         this.numeroMisiones = numeroMisiones;
     }
 
@@ -15,8 +19,8 @@ public class VideojuegoRol extends Videojuego {
     public void setNumeroMisiones(int numeroMisiones) {
         this.numeroMisiones = numeroMisiones;
     }
-    
+   @Override 
     public String toString() {
-        return super.toString() + " | Misiones: " + numeroMisiones;
+        return toString() + " | Misiones: " + numeroMisiones;
     }
 }

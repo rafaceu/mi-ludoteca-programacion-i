@@ -4,7 +4,10 @@ public class VideojuegoEstrategia extends Videojuego {
     private int numeroFacciones;
 
     public VideojuegoEstrategia(String titulo, String plataforma, int puntuacion, int horasJugadas, int numeroFacciones) {
-        super(titulo, plataforma, puntuacion, horasJugadas);
+        setTitulo(titulo);
+        setPlataforma(plataforma);
+        setPuntuacion(puntuacion);
+        setHorasJugadas(horasJugadas);
         this.numeroFacciones = numeroFacciones;
     }
 
@@ -17,6 +20,6 @@ public class VideojuegoEstrategia extends Videojuego {
     }
 
     public String toString() {
-        return super.toString() + " | Facciones: " + numeroFacciones;
+        return toString() + " | Facciones: " + numeroFacciones;
     }
 }

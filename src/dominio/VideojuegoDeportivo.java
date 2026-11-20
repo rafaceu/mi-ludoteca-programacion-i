@@ -4,7 +4,10 @@ public class VideojuegoDeportivo extends Videojuego {
     private String deporte;
 
     public VideojuegoDeportivo(String titulo, String plataforma, int puntuacion, int horasJugadas, String deporte) {
-        super(titulo, plataforma, puntuacion, horasJugadas);
+        setTitulo(titulo);
+        setPlataforma(plataforma);
+        setPuntuacion(puntuacion);
+        setHorasJugadas(horasJugadas);
         this.deporte = deporte;
     }
 
@@ -15,8 +18,8 @@ public class VideojuegoDeportivo extends Videojuego {
     public void setDeporte(String deporte) {
         this.deporte = deporte;
     }
-
+    @Override 
     public String toString() {
-        return super.toString() + " | Deporte: " + deporte;
+        return toString() + " | Deporte: " + deporte;
     }
 }

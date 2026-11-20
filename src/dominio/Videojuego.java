@@ -50,7 +50,7 @@ public int getHorasJugadas() {
         }
     }
     public String toString() {
-        return  titulo + " | Plataforma: " + plataforma + " | Puntuación: " + puntuacion + " | Horas: " + horasJugadas;
+        return  titulo + " // Plataforma: " + plataforma + " // Puntuación: " + puntuacion + " // Horas: " + horasJugadas;
     }
 }
 

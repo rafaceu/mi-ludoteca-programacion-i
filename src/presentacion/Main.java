@@ -2,26 +2,23 @@ package presentacion;
 
 import dominio.Ludoteca;
 import dominio.VideojuegoRol;
-import dominio.VideojuegoDeportivo;
-import dominio.VideojuegoEstrategia;
-import dominio.VideojuegoOnline;
 
 public class Main {
     public static void main(String[] args) {
         Ludoteca miLudoteca = new Ludoteca();
 
-       
-        VideojuegoRol rol = new VideojuegoRol("Zelda", "Nintendo Switch", 95, 50, 120);
-        VideojuegoDeportivo deportivo = new VideojuegoDeportivo("FIFA", "PS5", 85, 90, "Fútbol");
-        VideojuegoEstrategia estrategia = new VideojuegoEstrategia("Civilization", "PC", 90, 200, 6);
-        VideojuegoOnline online = new VideojuegoOnline("Minecraft", "PC", 92, 150, 100);
+        miLudoteca.agregar(new VideojuegoRol("GTA VI ", "PS5", 10, 15, 50));
+        miLudoteca.agregar(new VideojuegoRol("Fortnite", "PC", 8, 600, 30));
 
-        miLudoteca.agregar(rol);
-        miLudoteca.agregar(deportivo);
-        miLudoteca.agregar(estrategia);
-        miLudoteca.agregar(online);
+        System.out.println("===LISTA DE VIDEOJUEGOS===");
+        miLudoteca.listar();
 
-        System.out.println("===LISTA COMPLETA EN LA LUDOTECA===");
-        System.out.println(miLudoteca);
+        System.out.println("\nPuntuación media: " + miLudoteca.calcularPuntuacionMedia());
+
+        System.out.println("\n===VIDEOJUEGO MEJOR VALORADO===");
+        System.out.println(miLudoteca.obtenerMejorValorado().toString());
+
+        System.out.println("\n===BUSCAR VIDEOJUEGO===");
+        System.out.println(miLudoteca.buscarPorTitulo("The Witcher 3").toString());
     }
 }

@@ -4,7 +4,10 @@ public class VideojuegoOnline extends Videojuego {
     private int numeroJugadoresOnline;
 
     public VideojuegoOnline(String titulo, String plataforma, int puntuacion, int horasJugadas, int numeroJugadoresOnline) {
-        super(titulo, plataforma, puntuacion, horasJugadas);
+        setTitulo(titulo);
+        setPlataforma(plataforma);
+        setPuntuacion(puntuacion);
+        setHorasJugadas(horasJugadas);
         this.numeroJugadoresOnline = numeroJugadoresOnline;
     }
 
@@ -15,8 +18,7 @@ public class VideojuegoOnline extends Videojuego {
     public void setNumeroJugadoresOnline(int numeroJugadoresOnline) {
         this.numeroJugadoresOnline = numeroJugadoresOnline;
     }
-
     public String toString() {
-        return super.toString() + " | Jugadores Online: " + numeroJugadoresOnline;
+        return toString() + " | Jugadores Online: " + numeroJugadoresOnline;
     }
 }
